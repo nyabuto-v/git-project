@@ -3,7 +3,6 @@ import {Http, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 @Injectable()
 export class ProfileService {
-
   private username:string;
   private clientid = '88349eee8071659d6a69';
   private clientsecret = '4fd3e72b5d0c887d7f0deb0cf8814f585bbcf1c0';
