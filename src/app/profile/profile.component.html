@@ -1,18 +1,20 @@
-<form action="" class="search-form">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search git users with username"[(ngModel)]="username" name="username" (keyup)="findProfile()"> 
-
-
-  </div>
-</form>
-
-<div *ngIf="profile">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      {{profile.name}}<small>({{profile.login}})</small>
-      <span *ngIf="profile.company">, studies at {{profile.company}} </span>
-      {{profile.location}}
+<div class="container">
+  <div class="jumbotron">
+    <h3>GIT SEARCH</h3>
+    <h5><i>Find your developer-partners around the world!!</i></h5>
+  <form action="" class="search-form">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search git users with username"[(ngModel)]="username" name="username" (keyup)="findProfile()"> 
     </div>
+  </form>  
+  </div> 
+  <div *ngIf="profile">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{profile.name}}<small>({{profile.login}})</small>
+        <span *ngIf="profile.company">, studies at {{profile.company}} </span>
+        {{profile.location}}
+      </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-sm-3">
@@ -51,7 +53,6 @@
         </div>
       </div>
       
-    </div>
-    
-
+    </div>  
+</div>
 </div>
